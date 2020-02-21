@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="login/css/login.css">
+    <link rel="stylesheet" type="text/css" href="login/css/login2.css">
+    <title>Login</title>
+    <style type="text/css">
+        .exactCenter {
+            position: fixed;
+            top: 30%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="exactCenter">
+    <div class="container-fluid col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title" style="text-align: center;">Login</h4>
+            </div>
+            <div class="card-body">
+                <form method="post" th:action="@{/login}">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <input aria-describedby="addon-right addon-left"
+                                       type="text"
+                                       placeholder="Username"
+                                       name="username"
+                                       class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <div class="form-group">
+                                <input aria-describedby="addon-right addon-left"
+                                       type="password"
+                                       placeholder="Password"
+                                       name="password"
+                                       class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button type="submit"
+                                    class="btn btn-info btn-fill"
+                                    style="width: 100%;">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
