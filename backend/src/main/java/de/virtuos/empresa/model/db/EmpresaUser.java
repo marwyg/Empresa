@@ -1,6 +1,6 @@
-package de.virtuos.empresa.entity;
+package de.virtuos.empresa.model.db;
 
-import de.virtuos.empresa.entity.converter.EmpresaUserRoleToStringConverter;
+import de.virtuos.empresa.model.db.converter.EmpresaRoleToStringConverter;
 
 import javax.persistence.*;
 import java.util.Arrays;
@@ -23,8 +23,8 @@ public class EmpresaUser {
     @CollectionTable(name = "empresa_user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Column(name = "role_name")
     @Enumerated(EnumType.STRING)
-    @Convert(converter = EmpresaUserRoleToStringConverter.class)
-    private Set<EmpresaUserRole> roles;
+    @Convert(converter = EmpresaRoleToStringConverter.class)
+    private Set<EmpresaRole> roles;
 
     /**
      * getter
@@ -60,15 +60,15 @@ public class EmpresaUser {
         this.password = password;
     }
 
-    public Collection<EmpresaUserRole> getRoles() {
+    public Collection<EmpresaRole> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<EmpresaUserRole> roles) {
+    public void setRoles(Set<EmpresaRole> roles) {
         this.roles = roles;
     }
 
-    public void addRole(EmpresaUserRole role) {
+    public void addRole(EmpresaRole role) {
         if (roles == null) roles = new HashSet<>();
         roles.add(role);
     }

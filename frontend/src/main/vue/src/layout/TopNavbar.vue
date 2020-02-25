@@ -64,9 +64,17 @@
     </div>
   </nav>
 </template>
+
+
 <script>
 
-  import axios from 'axios';
+  import axios from 'axios'
+
+  var axiosProxyS = axios.create({
+    baseURL: 'http://localhost:8080/',
+    timeout: 1000,
+    headers: {'Authorization': 'Bearer ' + proxyObj.accessToken}
+  });
 
   export default {
     computed: {
@@ -77,17 +85,23 @@
     },
     data() {
       return {
-        activeNotifications: false
+        activeNotifications: false,
+        apiToken: proxyObj.accessToken
       }
     },
     methods: {
-      logout() {
-        axios
-          .post('/logout', {
-            _token:'csrf'
-        }).then(response => (this.info = response))
+      logout: function () {
+        axiosProxyS.post('/logout')
+          .then(function (res) {
+            window.location.href = 'http://localhost:8080/'
+          })
+          .catch(function (err) {
+            console.log(err);
+            window.location.href = 'http://localhost:8080/'
+          })
       }
     },
+
     capitalizeFirstLetter(string) {
       return string.charAt(0).toUpperCase() + string.slice(1)
     },

@@ -53,7 +53,8 @@
     },
     data() {
       return {
-        user: {}
+        user: {},
+        msg: proxyObj.accessToken
       }
     },
     methods: {

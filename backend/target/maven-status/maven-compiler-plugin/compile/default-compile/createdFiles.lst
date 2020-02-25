@@ -1,0 +1,16 @@
+de/virtuos/empresa/controller/AuthController.class
+de/virtuos/empresa/model/db/EmpresaUser.class
+de/virtuos/empresa/security/AuthEntryPointJwt.class
+de/virtuos/empresa/security/WebSecurityConfig.class
+de/virtuos/empresa/security/JwtUtils.class
+de/virtuos/empresa/MvcConfig.class
+de/virtuos/empresa/model/web/LoginRequest.class
+de/virtuos/empresa/model/db/EmpresaRole.class
+de/virtuos/empresa/repository/EmpresaUserRepository.class
+de/virtuos/empresa/model/db/converter/EmpresaRoleToStringConverter.class
+de/virtuos/empresa/security/UserDetailsImpl.class
+de/virtuos/empresa/security/AuthTokenFilter.class
+de/virtuos/empresa/security/UserDetailsServiceImpl.class
+de/virtuos/empresa/controller/MainController.class
+de/virtuos/empresa/model/web/LoginResponse.class
+de/virtuos/empresa/EmpresaApplication.class

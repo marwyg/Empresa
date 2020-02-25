@@ -1,6 +1,6 @@
 package de.virtuos.empresa.repository;
 
-import de.virtuos.empresa.entity.EmpresaUser;
+import de.virtuos.empresa.model.db.EmpresaUser;
 import org.springframework.data.repository.CrudRepository;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository

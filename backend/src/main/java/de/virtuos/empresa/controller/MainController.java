@@ -1,7 +1,7 @@
 package de.virtuos.empresa.controller;
 
-import de.virtuos.empresa.entity.EmpresaUser;
-import de.virtuos.empresa.entity.EmpresaUserRole;
+import de.virtuos.empresa.model.db.EmpresaUser;
+import de.virtuos.empresa.model.db.EmpresaRole;
 import de.virtuos.empresa.repository.EmpresaUserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +23,7 @@ public class MainController {
     String addNewUser(
             @RequestParam String username,
             @RequestParam String password,
-            @RequestParam Set<EmpresaUserRole> roles) {
+            @RequestParam Set<EmpresaRole> roles) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 

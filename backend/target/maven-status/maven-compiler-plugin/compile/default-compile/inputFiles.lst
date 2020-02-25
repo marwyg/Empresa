@@ -1,0 +1,16 @@
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/controller/MainController.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/EmpresaApplication.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/WebSecurityConfig.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/AuthEntryPointJwt.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/model/web/LoginRequest.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/model/db/EmpresaRole.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/model/web/LoginResponse.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/model/db/EmpresaUser.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/controller/AuthController.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/JwtUtils.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/AuthTokenFilter.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/UserDetailsImpl.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/repository/EmpresaUserRepository.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/security/UserDetailsServiceImpl.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/model/db/converter/EmpresaRoleToStringConverter.java
+/home/mwygas/Workspace/repos/Empresa/backend/src/main/java/de/virtuos/empresa/MvcConfig.java

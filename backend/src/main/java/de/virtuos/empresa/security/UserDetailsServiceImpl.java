@@ -1,6 +1,6 @@
 package de.virtuos.empresa.security;
 
-import de.virtuos.empresa.entity.EmpresaUser;
+import de.virtuos.empresa.model.db.EmpresaUser;
 import de.virtuos.empresa.repository.EmpresaUserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
 @Service
-public class EmpresaUserDetailsService implements UserDetailsService {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Resource
     private EmpresaUserRepository empresaUserRepository;
@@ -19,16 +19,8 @@ public class EmpresaUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
         EmpresaUser empresaUser = empresaUserRepository.findByUsername(username);
-        if (empresaUser == null) {
-            throw new UsernameNotFoundException(username);
-        }
-        return toUserDetails(empresaUser);
-    }
-
-    private UserDetails toUserDetails(EmpresaUser empresaUser) {
-        return User.withUsername(empresaUser.getUsername())
-                .password(empresaUser.getPassword())
-                .roles(empresaUser.convertRolesToArray()).build();
+        if (empresaUser == null) throw new UsernameNotFoundException(username);
+        return UserDetailsImpl.build(empresaUser);
     }
 
 }
